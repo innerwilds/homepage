@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<body>
+<h3>innerwilds home page</h3>
+<h4>goods:</h4>
+<h5>flutter</h5>
+<ul>
+<li>crawl sticker indicator - create a worm that crawles from one place to another in -/| axis</li>
+<code lang='dart'>
+final decoration = BoxDecoration(
+	color: Colors.red,
+);
+
+class MyList extends StatefullWidget {
+	State<MyList> createState() => MyListState();
+}
+
+class MyListState extends State<MyList> {
+  int index = 0;
+
+  build(_) => CrawlStickerSurface(
+    child: ListView(
+	children: List.generate((i) => InkWell(
+		onTap: () => setState(() => index = i),
+		child: Row(
+			children: [StickerWidget(decoration: decoration, show: i == index), Text('Item $i')]
+),
+)),
+),	
+  );
+}
+</code>
+<!-- <li>replace_anywhere - an desktop app to find occurrences of text in anywhere on the system and replace them</li> -->
+</ul>
+</body>
+</html>
